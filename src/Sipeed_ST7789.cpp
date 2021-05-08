@@ -8,7 +8,7 @@ Sipeed_ST7789::Sipeed_ST7789(uint16_t w, uint16_t h, SPIClass& spi, int8_t dc_pi
 :Adafruit_GFX(w,h),
  _spi(spi), _dcxPin(dc_pin), _rstPin(rst_pin), 
  _dmaCh(dma_ch),
- _screenDir(DIR_YX_RLDU)
+ _screenDir(DIR_YX_LRUD)
 {
     configASSERT(_spi.busId()==SPI0);
 }

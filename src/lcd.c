@@ -112,7 +112,8 @@ void lcd_init(uint8_t spi, uint8_t ss, uint8_t rst, uint8_t dcx, uint32_t freq, 
     tft_write_command(PIXEL_FORMAT_SET);
     data = 0x55;
     tft_write_byte(&data, 1);
-    lcd_set_direction(DIR_YX_RLDU);
+    /*turn on display inversion*/
+    tft_write_command(INVERSION_DISPALY_ON);
 
     /*display on*/
     tft_write_command(DISPALY_ON);
